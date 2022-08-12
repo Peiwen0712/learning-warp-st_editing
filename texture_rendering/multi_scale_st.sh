@@ -1,5 +1,6 @@
 # Script for multi scale texture style transfer
 
+# change the name "n.png", "y.png", while testing
 STYLE_IMAGE=examples/inputs/n.png
 CONTENT_IMAGE=examples/inputs/y.png
 
@@ -7,8 +8,11 @@ STYLE_WEIGHT=5e1
 STYLE_SCALE=1.0
 STYLE_WEIGHT2=2500 # Style weight for image size 2048 and above
 
+
+# edited into GUP=c * C and c is different, C cannot work
 GPU=c
 
+# output size 32 image
 python3 neural_style.py \
   -content_image $CONTENT_IMAGE \
   -style_image $STYLE_IMAGE \
@@ -22,6 +26,7 @@ python3 neural_style.py \
   -gpu $GPU \
   -backend cudnn
 
+# output size 64 image
 python3 neural_style.py \
   -content_image $CONTENT_IMAGE \
   -style_image $STYLE_IMAGE \
@@ -36,6 +41,7 @@ python3 neural_style.py \
   -gpu $GPU \
   -backend cudnn
 
+# output size 128 image
 python3 neural_style.py \
   -content_image $CONTENT_IMAGE \
   -style_image $STYLE_IMAGE \
@@ -50,6 +56,7 @@ python3 neural_style.py \
   -gpu $GPU \
   -backend cudnn
 
+# output size 256 image
 python3 neural_style.py \
   -content_image $CONTENT_IMAGE \
   -style_image $STYLE_IMAGE \
@@ -64,6 +71,7 @@ python3 neural_style.py \
   -gpu $GPU \
   -backend cudnn
 
+# output size 512 image
 python3 neural_style.py \
   -content_image $CONTENT_IMAGE \
   -style_image $STYLE_IMAGE \
@@ -79,6 +87,7 @@ python3 neural_style.py \
   -gpu $GPU \
   -backend cudnn
 
+# output size 1024 image
 python3 neural_style.py \
   -content_image $CONTENT_IMAGE \
   -style_image $STYLE_IMAGE \
